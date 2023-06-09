@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <!-- Move the reviews bar (stars and links) below the final price -->
+        <move element="product.info.review" destination="product.info.price" after="product.price.final"/>
+
+        <!-- Move product title above the left side product image -->
+        <move element="page.main.title" destination="product.info.media" before="-"/>
+
+
+        <!-- Move stock / SKU info above (next to) the price -->
+        <move element="product.info.stock.sku" destination="product.info.price" before="product.price.final"/>
+
+
+        <!-- Move stock / SKU info above (next to) the price -->
+        <move element="product.info.details" destination="product.info.extrahint" before="-"/>
+
+
+
+
+    </body>
+</page>
