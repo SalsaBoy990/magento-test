@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="Gulacsi\EcommsolversWidget\Block\Widget\VideoWidget" id="gulacsi_ecommsolverswidget_videowidget">
+        <label>Ecommsolvers Video Widget</label>
+        <description>Displays an mp4 video in a HTML5 video tag. The url is configurable on the widget settings screen,
+            with a text input field. The video starts by default, muted and looping. Two custom control buttons are
+            implemented: play/pause, and mute/unmute button.
+        </description>
+        <parameters>
+            <parameter name="widget_title" sort_order="10" visible="true" xsi:type="text">
+                <label>Video Title</label>
+            </parameter>
+            <parameter name="widget_video_url" sort_order="20" visible="true" xsi:type="text">
+                <label>Video Url</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

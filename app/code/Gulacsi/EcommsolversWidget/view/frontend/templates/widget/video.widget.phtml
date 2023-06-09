@@ -1,0 +1,27 @@
+<section class="gulacsi_ecommsolvers_videowidget">
+
+    <?php if ( $block->getData( 'widget_video_url' ) ) { ?>
+
+        <video id="ecommsolvers-video-widget-test"
+               title="<?= $block->getData( 'widget_title' ) ?? ''; ?>"
+               width="100%"
+               height="100%"
+               autoplay
+               muted
+               loop>
+            <source src="<?= $block->getData( 'widget_video_url' ) ?>"
+                    type="video/mp4">
+        </video>
+
+    <?php } else { ?>
+        <p class="error-notice">You did not supply a video url!</p>
+    <?php } ?>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById("ecommsolvers-video-widget-test").play();
+        });
+    </script>
+</section>
+
+
