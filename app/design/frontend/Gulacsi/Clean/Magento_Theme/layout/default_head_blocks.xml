@@ -1,7 +1,14 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
+        <!-- Needed for Livereload browser extension -->
         <script defer="true" src="/livereload.js?port=443" src_type="url"/>
+
+        <!-- Custom CSS bundle for the Luma child theme -->
         <css src="css/clean.css"/>
+
+        <!-- External resources -->
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" src_type="url" />
+
     </head>
 </page>
