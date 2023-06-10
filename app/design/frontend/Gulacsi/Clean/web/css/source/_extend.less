@@ -1,16 +1,14 @@
-/*
-.action {
-    &.primary {
-        background-color: mediumpurple;
-        border-color: mediumpurple;
-    }
-}
+@import '_variables_extend.less';
+@import '_typography_extend.less';
 
-.block-promo {
-    .action.more.button {
-        background-color: green;
-        border-color: mediumpurple;
-    }
-}
-*/
+//
+//  Icons
+//  ---------------------------------------------
 
+@icons__font-path: "@{baseDir}fonts/icomoon/icomoon";
+@icons__font-name: 'icomoon';
+@icon-font__size: 2.2rem;
+
+.block-promo .icon.more:after {
+    font-family: 'icomoon';
+}
