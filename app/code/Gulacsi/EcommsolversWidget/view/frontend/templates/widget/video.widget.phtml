@@ -1,4 +1,7 @@
-<section class="gulacsi_ecommsolvers_videowidget">
+<section class="gulacsi-ecommsolvers-videowidget">
+
+    <button id="play-pause-video"></button>
+    <button id="mute-unmute-video"></button>
 
     <?php if ( $block->getData( 'widget_video_url' ) ) { ?>
 
@@ -19,7 +22,63 @@
 
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
+            // Autoplay on page load
             document.getElementById("ecommsolvers-video-widget-test").play();
+
+            // Get elems
+            var videoEl = document.getElementById('ecommsolvers-video-widget-test');
+            var playButton = document.getElementById('play-pause-video');
+            var muteButton = document.getElementById('mute-unmute-video');
+
+
+            // Events to control the video
+            videoEl.addEventListener('click', togglePlayVideo);
+            playButton.addEventListener('click', togglePlayVideo);
+            muteButton.addEventListener('click', toggleMute);
+
+            playButton.title = 'Pause';
+            muteButton.title = 'Unmute';
+
+
+            /* (UN)MUTE */
+            function toggleMute() {
+                if (videoEl.muted) {
+                    // Unmute icon
+                    muteButton.style.setProperty("--content-mute", "'\\ea27'");
+                    muteButton.title = 'Mute';
+                } else {
+                    // Mute icon
+                    muteButton.style.setProperty("--content-mute", "'\\ea2a'");
+                    muteButton.title = 'Unmute';
+                }
+
+                videoEl.muted = !videoEl.muted;
+
+            }
+
+
+            /* PLAY/PAUSE */
+            function togglePlayVideo() {
+
+                if (videoEl.paused) {
+                    videoEl.play();
+
+                    // Show pause icon (on hover/focus)
+                    playButton.style.setProperty("--content-play", "'\\ea16'");
+                    playButton.title = 'Pause';
+                    playButton.style.visibility = 'hidden';
+
+                } else {
+                    videoEl.pause();
+
+                    // Show play icon
+                    playButton.style.setProperty("--content-play", "'\\ea15'");
+                    playButton.title = 'Play';
+                    playButton.style.visibility = 'visible';
+                }
+
+            }
+
         });
     </script>
 </section>
