@@ -1,0 +1,76 @@
+.gulacsi-ecommsolvers-videowidget {
+  position: relative;
+  width: auto;
+  /* aspect-ratio: 16 / 9; -> not supported by older browser versions  */
+  padding-top: 56.25%;
+}
+@media only screen and (max-width: 767px) {
+  .gulacsi-ecommsolvers-videowidget {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+.gulacsi-ecommsolvers-videowidget:hover button#play-pause-video,
+.gulacsi-ecommsolvers-videowidget:focus button#play-pause-video {
+  visibility: visible !important;
+}
+.gulacsi-ecommsolvers-videowidget p.error-notice {
+  padding: 1em;
+  color: firebrick;
+  background-color: lightgrey;
+  margin-bottom: 0;
+}
+.gulacsi-ecommsolvers-videowidget video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gulacsi-ecommsolvers-videowidget button {
+  position: absolute;
+  background: transparent;
+  border: none;
+  z-index: 10;
+}
+.gulacsi-ecommsolvers-videowidget button:focus {
+  visibility: visible;
+}
+.gulacsi-ecommsolvers-videowidget button:after {
+  font-family: 'icomoon';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  margin: 0;
+  vertical-align: top;
+  display: inline-block;
+  font-weight: normal;
+  overflow: hidden;
+  speak: none;
+  text-align: center;
+}
+.gulacsi-ecommsolvers-videowidget button#play-pause-video {
+  visibility: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gulacsi-ecommsolvers-videowidget button#play-pause-video:after {
+  /* Change --content variable with JS when clicking this button to replace icon */
+  content: var(--content-play, '\ea16');
+  /* Luma icons fonts were extended with new icons using IcoMoon (https://icomoon.io/app/#/select)
+                   See app/design/frontend/Gulacsi/Clean/web/css/source
+                */
+  font-size: 50px;
+  line-height: 50px;
+}
+.gulacsi-ecommsolvers-videowidget button#mute-unmute-video {
+  top: 1em;
+  right: 1em;
+}
+.gulacsi-ecommsolvers-videowidget button#mute-unmute-video:after {
+  content: var(--content-mute, '\ea2a');
+  font-size: 20px;
+  line-height: 20px;
+}
