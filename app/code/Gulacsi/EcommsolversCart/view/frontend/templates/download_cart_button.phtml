@@ -1,12 +1,8 @@
 <?php $isCSVDownloadEnabled = intval( $block->getIsDownloadEnabled() );
 
 if ( $isCSVDownloadEnabled ) { ?>
-    <a class="ecommsolvers-cart-download-link" href="<?= htmlspecialchars( $block->getDownloadUrl() ) ?>" download type="button">Download cart items in CSV</a>
+    <a class="ecommsolvers-cart-download-link" href="<?= htmlspecialchars( $block->getDownloadUrl() ) ?>" download type="button">
+        Download cart items in CSV
+    </a>
 <?php } ?>
-<style>
-    .ecommsolvers-cart-download-link {
-        text-align: center;
-        display: block;
-        font-weight: 700;
-    }
-</style>
+
