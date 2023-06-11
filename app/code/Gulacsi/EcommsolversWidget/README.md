@@ -10,8 +10,18 @@ php bin/magento setup:upgrade
 
 ## Example video url you can use
 
-`https://res.cloudinary.com/dky4rnquj/video/upload/v1661019242/example_ef96753deb.mp4`
+`https://res.cloudinary.com/dky4rnquj/video/upload/v1686408478/South_Pacific_Mother_Nature_tries_to_create_an_island_before_your_very_eyes_sijz89.mp4`
 
+## Generate CSS and JS bundles
+
+```bash
+npm install
+gulp watch
+gulp styles
+gulp scripts
+```
+
+Sources are in the `src/` folder
 
 ## TODO
 
