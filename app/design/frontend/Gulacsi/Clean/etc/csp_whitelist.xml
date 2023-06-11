@@ -11,8 +11,13 @@
         </policy>
         <policy id="style-src">
             <values>
-                <value id="fonts.googleapis" type="host">fonts.googleapis</value>
+                <value id="fonts.googleapis" type="host">fonts.googleapis.com</value>
                 <value id="fonts.gstatic" type="host">fonts.gstatic.com</value>
+            </values>
+        </policy>
+        <policy id="script-src">
+            <values>
+                <value id="cdn.jsdelivr.net" type="host">cdn.jsdelivr.net</value>
             </values>
         </policy>
     </policies>
