@@ -9,22 +9,28 @@ export const videoWidget = {
         this.playButton = document.getElementById('play-pause-video');
         this.muteButton = document.getElementById('mute-unmute-video');
 
-        // Autoplay on page load
-        this.videoEl.play();
+        if (this.videoEl) {
+            // Autoplay on page load
+            this.videoEl.play();
+
+            // Events to control the video
+            this.videoEl.addEventListener('click', () => {
+                this.togglePlayVideo();
+            });
+        }
+
+        if (this.playButton) {
+            this.playButton.addEventListener('click', () => {
+                this.togglePlayVideo();
+            });
+        }
 
 
-        // Events to control the video
-        this.videoEl.addEventListener('click', () => {
-            this.togglePlayVideo();
-        });
-
-        this.playButton.addEventListener('click', () => {
-            this.togglePlayVideo();
-        });
-
-        this.muteButton.addEventListener('click', () => {
-            this.toggleMute();
-        });
+        if (this.muteButton) {
+            this.muteButton.addEventListener('click', () => {
+                this.toggleMute();
+            });
+        }
 
     },
 
