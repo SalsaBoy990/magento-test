@@ -25,7 +25,7 @@ php bin/magento setup:upgrade
 
 `https://res.cloudinary.com/dky4rnquj/video/upload/v1686408478/South_Pacific_Mother_Nature_tries_to_create_an_island_before_your_very_eyes_sijz89.mp4`
 
-### Generate CSS and JS bundles
+### Generate CSS and JS bundles (not needed - already done)
 
 ```bash
 npm install
@@ -48,4 +48,4 @@ php bin/magento setup:upgrade
 
 ### Admin page
 
-The setting to enable/disable cart download is at Stores -> Configuration page -> Ecommsolvers tab.
+The setting to enable/disable cart download is at `Stores -> Configuration page -> Ecommsolvers tab`.
