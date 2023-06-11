@@ -14,4 +14,10 @@ class DownloadCartContent extends Template
     {
         return $this->_scopeConfig->getValue('section_id/ecommsolvers_settings_group_cart/field_id');
     }
+
+    // Controller Url
+    public function getDownloadUrl()
+    {
+        return $this->getUrl('cart/index/download');
+    }
 }
