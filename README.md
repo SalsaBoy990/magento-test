@@ -49,3 +49,7 @@ php bin/magento setup:upgrade
 ### Admin page
 
 The setting to enable/disable cart download is at `Stores -> Configuration page -> Ecommsolvers tab`.
+
+### Cart page
+
+The CSV download link is just above the checkout button.
