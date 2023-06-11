@@ -1,0 +1,8 @@
+<?php $isCSVDownloadEnabled = intval($block->getIsDownloadEnabled());
+
+print_r($isCSVDownloadEnabled);
+if ( $isCSVDownloadEnabled ) { ?>
+    <a href="#" type="button">Download cart items in CSV</a>
+<?php } else { ?>
+    <p>CSV download disabled.</p>
+<?php } ?>
